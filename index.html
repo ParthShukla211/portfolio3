@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Shukla | Portfolio</title>
+    <link rel="icon" href="favicon.png" type="image/gif">
+    <!-- {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}"> -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="logo"><a href="#home">Parth - <span>Portfolio.</span></a></div>
+
+
+
+
+
+                <ul class="menu" id="nav-links">
+                    <li><a href="/index.html" class="menu-btn">Home</a></li>
+                    <li><a href="/myskills.html" class="menu-btn">My Skills</a></li>
+                    <li><a href="/myprojects.html" class="menu-btn">My Projects</a></li>
+                    <li><a href="internships.html" class="menu-btn">Internships</a></li>
+                    <li><a href="/experiences.html" class="menu-btn">Experiences</a></li>
+                    <li><a href="/certificates.html" class="menu-btn">Certificates</a></li>
+                    <li><a href="/aboutme.html" class="menu-btn">About Me</a></li>
+                    <li><a href="/contactme.html" class="menu-btn">Contact Me</a></li>
+                </ul>
+
+                <div class="ham-btn" onclick="togglenav();logonone();hambtnnone();bgnavbar();showtcross()">
+                    &#9776
+                </div>
+
+                <div class="tcross" onclick="hidetcross();hideall();defaultlogo();defaulthamb()">
+                    &#x2715
+                </div>
+
+
+                <!-- <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div> -->
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- home section start -->
+    <section class="home" id="home">
+
+        <div class="max-width">
+            <div class="home-content">
+                <div class="showtext">
+                    <div class="text-1" id="homet1">Hello, my name is</div>
+                    <div class="text-2" id="homet2">Parth Shukla</div>
+                    <div class="text-3" id="homet3">
+                        <h3 class="typeh3"> And I'm
+                            <a href="" class="typewrite" data-period="2000"
+                                data-type='[ "a Data Scientist", "a ML Engineer", "a Web Developer", "an Engineer" ]'>
+                                <span class="wrap"></span>
+                            </a>
+                    </div>
+                </div>
+
+
+                <div class="hidetext">
+                    <div class="text-1" id="homet1">Hello, my name is</div>
+                    <div class="text-2" id="homet2">Parth <br> Shukla</div>
+                    <div class="text-3" id="homet3">
+                        <h3 class="typeh3"> And I'm a<br>
+                            <a href="" class="typewrite" data-period="2000"
+                                data-type='[ "Data Scientist", "ML Engineer", "Web Developer", "Student" ]'>
+                                <span class="wrap"></span>
+                            </a>
+                    </div>
+                </div>
+
+                <div href="#btmore" onclick="show() ; showcross()" class="dropdown" id="drop">
+                    <button class="mainmenubutton">
+                        <a id="exploremoretext" href="#btmore"> Explore More</a>
+                    </button>
+
+
+                </div>
+
+                <div class="btnmore" id="btmore">
+                    <p class="crossbtn" onclick="window.closeshow();window.closeshowcross()">&#x2715</p>
+                    <div class="btng1">
+                        <a class="btncontent" id="btn1" href="/achievements.html">Achievements</a>
+                        <a class="btncontent" id="btn2" href="/publications.html">Publications</a>
+                        <a class="btncontent" id="btn3" href="/moreinfo.html">More Information</a>
+                    </div>
+                    <div class="btng2">
+                        <a class="btncontent" id="btn4" href="/courses.html">Courses</a>
+                        <a class="btncontent" id="btn5" href="/studybg.html">Study Background</a>
+                        <a class="btncontent" id="btn6" href="/autobiography.html">AutoBiography</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <script>
+
+                var navlinks = document.getElementById('nav-links')
+                var logo = document.getElementsByClassName('logo')[0]
+                var hambtn = document.getElementsByClassName('ham-btn')[0]
+                var navbar = document.getElementsByClassName('navbar')[0]
+                var tcross = document.getElementsByClassName('tcross')[0]
+
+                function togglenav() {
+                    navlinks.style.display='flex';
+                } 
+
+                function logonone() {
+                    console.log('logo none')
+                    logo.style.display='none';
+                }
+
+                function hambtnnone() {
+                    console.log('hambtn none')
+                    hambtn.style.display='none';
+                }
+
+                function bgnavbar() {
+                    console.log('hambtn none');
+                    navbar.style.backgroundColor ='white';
+                }
+
+                function showtcross() {
+                    console.log('hambtn none');
+                    tcross.style.display ='flex';
+                }
+
+                function hidetcross() {
+                    console.log('hambtn none');
+                    tcross.style.display ='none';
+                }
+
+                function hideall() {
+                    console.log('hambtn none');
+                    navlinks.style.display ='none';
+                    navbar.style.background ='none';
+                }
+
+                function defaultlogo() {
+                    logo.style.display='flex';
+                }
+
+                function defaulthamb() {
+                    hambtn.style.display='flex';
+                }
+
+
+
+
+            </script>
+
+
+
+            <!-- <script>
+
+                var btncon = document.getElementsByClassName('btncontent');
+                var crossbtnp=document.getElementsByClassName('crossbtn');
+                var btnm = document.getElementsByClassName('btnmore');
+
+
+
+                
+
+                function show() {
+                    for (var i = 0; i < btncon.length; i += 1) {
+                        btncon[i].style.display = 'flex';
+                    }
+                }
+
+                function showcross(){
+                    crossbtnp[0].style.display = 'flex';
+                }
+
+                function close() {
+                    btnm[0].style.display = 'none';
+                    
+                }
+
+             
+            
+
+            
+
+
+            </script>
+             -->
+
+            <!-- <script src="../scripts/toggle.js"></script>
+             <script src="../scripts/typing.js"></script> -->
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+            <script src="./typed.js-master/lib/typed.min.js">
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/
+               jquery/3.5.1/jquery.min.js">
+            </script>
+
+            <script>
+
+
+
+
+
+            </script>
+
+
+
+
+            <script>
+                var btncon = document.getElementsByClassName('btncontent');
+                var crossbtnp = document.getElementsByClassName('crossbtn');
+                var btnm = document.getElementsByClassName('btnmore');
+
+
+
+
+
+                function show() {
+                    console.log('this is show function')
+                    for (var i = 0; i < btncon.length; i += 1) {
+                        btncon[i].style.display = 'flex';
+                    }
+                }
+
+                function showcross() {
+                    console.log('this is showcross function')
+                    crossbtnp[0].style.display = 'flex';
+                }
+
+                function closeshow() {
+                    console.log('this is close function')
+                    for (var i = 0; i < btncon.length; i += 1) {
+                        btncon[i].style.display = 'none';
+                    }
+                }
+
+
+
+                function closeshowcross() {
+                    crossbtnp[0].style.display = 'none';
+
+                }
+            </script>
+
+
+            <script>
+                var TxtType = function (el, toRotate, period) {
+                    this.toRotate = toRotate;
+                    this.el = el;
+                    this.loopNum = 0;
+                    this.period = parseInt(period, 10) || 2000;
+                    this.txt = '';
+                    this.tick();
+                    this.isDeleting = false;
+                };
+
+                TxtType.prototype.tick = function () {
+                    var i = this.loopNum % this.toRotate.length;
+                    var fullTxt = this.toRotate[i];
+
+                    if (this.isDeleting) {
+                        this.txt = fullTxt.substring(0, this.txt.length - 1);
+                    } else {
+                        this.txt = fullTxt.substring(0, this.txt.length + 1);
+                    }
+
+                    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+                    var that = this;
+                    var delta = 200 - Math.random() * 100;
+
+                    if (this.isDeleting) { delta /= 2; }
+
+                    if (!this.isDeleting && this.txt === fullTxt) {
+                        delta = this.period;
+                        this.isDeleting = true;
+                    } else if (this.isDeleting && this.txt === '') {
+                        this.isDeleting = false;
+                        this.loopNum++;
+                        delta = 500;
+                    }
+
+                    setTimeout(function () {
+                        that.tick();
+                    }, delta);
+                };
+
+                window.onload = function () {
+                    var elements = document.getElementsByClassName('typewrite');
+                    for (var i = 0; i < elements.length; i++) {
+                        var toRotate = elements[i].getAttribute('data-type');
+                        var period = elements[i].getAttribute('data-period');
+                        if (toRotate) {
+                            new TxtType(elements[i], JSON.parse(toRotate), period);
+                        }
+                    }
+                    // INJECT CSS
+                    var css = document.createElement("style");
+                    css.type = "text/css";
+                    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000000}";
+                    document.body.appendChild(css);
+                };
+
+            </script>
+
+    </section>
+
+
+
+
+
+    <!-- footer section start -->
+    <footer>
+        <span>Created By <b>Parth Shukla</b> , Copyright &copy; 2022 All rights reserved.</span>
+    </footer>
+
+
+
+</body>
+
+<script type="text/javascript">
+    (function (d, m) {
+        var kommunicateSettings =
+            { "appId": "248c174492c90fa43f17f17ea760b1d01", "popupWidget": true, "automaticChatOpenOnNavigation": true };
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+
+
+
+</html>

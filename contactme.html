@@ -1,0 +1,126 @@
+<!-- contact section start -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Shukla | Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- <div class="alert alert-{{ message.tags }} alert-dismissible fade show " role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> -->
+
+
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact me</h2>
+            <div class="contact-content">
+                <div class="column left" id="column-left">
+                    <div class="cmtext">
+                        <div class="text">Get in Touch</div>
+                        <p>Hello Everyone! This is Parth Shukla , Greetings from my side.Kindly fill this form to approach me or mail me on the given Email ID.</p>
+                    </div>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Parth Shukla</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">Gujarat , India</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">shuklaparth501@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Message me</div>
+                    <form method='post' action="javascript:sendmail()" onsubmit="sendmail(); reset(); return false;">
+                        <div class="fields">
+                            <div class="field name">
+                                <input id="cmname" type="text" placeholder="Name" name="name" required>
+                            </div>
+                            <div class="field email">
+                                <input id="cmemail" type="email" placeholder="Email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input id="cmsubject" type="text" placeholder="Subject" name="subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea id="cmmessage" cols="30" rows="10" placeholder="Message.." name="message"
+                                required></textarea>
+                        </div>
+                        <div class="button-area">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
+                </div>
+                <script src="https://smtpjs.com/v3/smtp.js"></script>
+                <script>
+                    // smtp function
+                    function sendmail() {
+
+                        var name = document.getElementById('cmname').value;
+                        var email = document.getElementById('cmemail').value;
+                        var subject = document.getElementById('cmsubject').value;
+                        var message = document.getElementById('cmmessage').value;
+
+                        // var body = $('#body').val();
+
+                        var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Subject: ' + subject + '<br>Message: ' + message;
+                        //console.log(name, phone, email, message);
+
+                        Email.send({
+                            SecureToken: "4114977c-f9e2-4fb9-8e3f-67b91cfd0834",
+                            // Host: 'smtp.gmail.com',
+                            To: 'shuklaparth501@gmail.com',
+                            From: 'shuklaparth501@gmail.com',
+                            Subject: "New message on contact from " + name,
+                            Body: Body
+                        }).then(
+                            message => {
+                                //console.log (message);
+                                if (message == 'OK') {
+                                    alert('Your mail has been send. Thank you for connecting.');
+                                }
+                                else {
+                                    console.error(message);
+                                    alert('This service is currently unavailable , please send an email to givem maail id if urgent | Email : shuklaparth501@gmail.com.')
+
+                                }
+
+                            }
+                        );
+
+
+
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
